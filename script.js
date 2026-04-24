@@ -20,13 +20,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Mobile Menu Toggle
   const menuBtn = document.querySelector(".menu-btn");
+  const closeBtn = document.querySelector(".close-menu-btn");
   const navLinks = document.querySelector(".nav-links");
   const navItems = document.querySelectorAll(".nav-links a");
   
   if (menuBtn) {
     menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
+      navLinks.classList.add("active");
     });
+    
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    }
     
     // Close menu when a link is clicked
     navItems.forEach(item => {
