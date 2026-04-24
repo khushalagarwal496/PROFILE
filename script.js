@@ -17,4 +17,22 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Trigger once on load to reveal elements currently in view
   revealOnScroll(); 
+
+  // Mobile Menu Toggle
+  const menuBtn = document.querySelector(".menu-btn");
+  const navLinks = document.querySelector(".nav-links");
+  const navItems = document.querySelectorAll(".nav-links a");
+  
+  if (menuBtn) {
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+    
+    // Close menu when a link is clicked
+    navItems.forEach(item => {
+      item.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+  }
 });
