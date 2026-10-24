@@ -6,7 +6,7 @@ export const profile = {
   initials: 'KA',
   role: 'Full Stack Developer · AI Product Builder',
   location: 'Noida, India',
-  email: 'your.email@example.com', // TODO: add your professional email
+  email: 'khushalagarwal496@gmail.com',
   intro:
     'I combine web development, AI, and product thinking to build useful digital experiences — from solving user problems to creating scalable products.',
   about:

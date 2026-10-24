@@ -5,6 +5,7 @@ import {
 } from 'lucide-react'
 import { profile, projects, skills, skillCategories, education, experience } from './data'
 import profilePic from './assets/khushal-profile.png'
+import ContactSection from './ContactSection'
 
 const reveal = {
   hidden: { opacity: 0, y: 18 },
@@ -112,9 +113,9 @@ export default function App() {
           <span>KHUSHAL AGARWAL</span>
         </a>
         <div className="nav-links">
-          <a href="#work">Work</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#experience">Experience</a>
+          <a href="#work">Work</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
         </div>
-        <a className="nav-contact" href={`mailto:${profile.email}`}>Let’s talk <ArrowUpRight size={15} /></a>
+        <a className="nav-contact" href="#contact">Let’s talk <ArrowUpRight size={15} /></a>
       </nav>
 
       <motion.section id="home" className="hero bento-grid" initial="hidden" animate="visible" variants={{ visible: { transition: { staggerChildren: 0.09 } } }}>
@@ -313,14 +314,7 @@ export default function App() {
         </div>
       </motion.section>
 
-      <motion.section className="contact-tile" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={reveal}>
-        <div className="contact-glow" />
-        <SectionLabel>HAVE A PROJECT IN MIND?</SectionLabel>
-        <h2>Let’s build something<br /><span>meaningful.</span></h2>
-        <p>Open to internships, collaborations and interesting problems.</p>
-        <a className="primary-button" href={`mailto:${profile.email}`}>Get in touch <Mail size={16} /></a>
-        <div className="contact-spark spark-a">✳</div><div className="contact-spark spark-b">✳</div>
-      </motion.section>
+      <ContactSection />
 
       <footer className="footer">
         <a className="brand" href="#home">
